@@ -260,7 +260,8 @@ $(function(){
         $albumiPic.prop("src",data.picBig);
         $songName.html(data.songName);
         $singer.html(data.singer);
-        $audio.prop("src",data.url);
+        // $audio.prop("src",data.url);
+        $audio.prop("src","mp3/test.mp3");
         $audio[0].play();
 
         //改变播放按钮状态
@@ -271,7 +272,8 @@ $(function(){
         $tbody.data({current : n});
 
         //切歌时载入歌词
-        lyricLoad(data);
+        // lyricLoad(data);
+        console.warn("因网络接口被关闭，暂时只能播放本地音乐，维护中。。。请见谅")
     }
 
     //自定义滚动条
