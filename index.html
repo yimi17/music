@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿网易云音乐</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <!--头部logo-->
+            <h1 class="header-logo fl"></h1>
+            <!--头部搜索-->
+            <div class="header-search">
+                <input type="text" id="search" placeholder="搜索音乐，视频 ，歌词，电台">
+                <i class="search iconfont icon-fangdajing"></i>
+            </div>
+            <!--头部功能设置-->
+            <div class="header-set fr">
+                <div class="left fl">
+                    <i class="iconfont icon-icon-system-fn-skin"></i>
+                    <i class="iconfont icon-youjian"></i>
+                    <i class="iconfont icon-shezhi"></i>
+                </div>
+                <div class="right fl">
+                    <i class="iconfont icon-zuixiaohua"></i>
+                    <i class="iconfont icon-zuidahua2"></i>
+                    <i class="iconfont icon-guanbi"></i>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <!--主体功能列表-->
+            <div class="main-list fl">
+                <dl class="list-btn">
+                    <dt>推荐</dt>
+                    <dd><i class="iconfont icon-180"></i><span>发现音乐</span></dd>
+                    <dd><i class="iconfont icon-fmpm"></i><span>私人FM</span></dd>
+                    <dd><i class="iconfont icon-mv"></i><span>MV</span></dd>
+                    <dd><i class="iconfont icon-pengyou"></i><span>朋友</span></dd>
+                    <dt>我的音乐</dt>
+                    <dd><i class="iconfont icon-bendiyinle"></i><span>本地音乐</span></dd>
+                    <dd><i class="iconfont icon-xiazai"></i><span>下载管理</span></dd>
+                    <dd><i class="iconfont icon-yunpan"></i><span>我的音乐云盘</span></dd>
+                    <dd><i class="iconfont icon-wodeshoucang"></i><span>我的收藏</span></dd>
+                    <dt>创建的歌单</dt>
+                    <dd class="on"><i class="iconfont icon-icon1460188445268"></i><span>我喜欢的音乐</span></dd>
+                </dl>
+                <div class="list-icon">
+                    <div class="img fl">
+                        <img src="http://i.gtimg.cn/music/photo/mid_album_90/S/X/003W45rC3ob4SX.jpg" id="singerPic"/>
+                    </div>
+                    <div class="txt fl">
+                        <p><span id="song-name">带你去旅行</span><i class="iconfont icon-icon1460188445268"></i></p>
+                        <p><span id="singer">校长</span><i class="iconfont icon-fenxiang"></i></p>
+                    </div>
+                </div>
+            </div>
+            <!--主体内容-->
+            <div class="main-content fl">
+                <div class="content-container">
+                    <!--歌曲信息-->
+                    <div class="content-info">
+                        <div class="info-img fl">
+                            <img src="http://i.gtimg.cn/music/photo/mid_album_300/S/X/003W45rC3ob4SX.jpg" id="albumPic"/>
+                        </div>
+                        <div class="info-txt fl">
+                            <div class="info-title">
+                                <span class="fl">歌单</span>
+                                <h1 class="fl">我喜欢的音乐</h1>
+                            </div>
+                            <div class="info-author clearfix">
+                                <img src="http://i.gtimg.cn/music/photo/mid_album_90/v/G/0032fzRt2HJ5vG.jpg"/>
+                                <span>yimi258</span>
+                                <span>2017-11-16创建</span>
+                            </div>
+                            <div class="info-btn">
+                                <span class="on"><i class="iconfont icon-bofang"></i>播放全部</span>
+                                <span><i class="iconfont icon-wodeshoucang"></i>收藏(0)</span>
+                                <span><i class="iconfont icon-fenxiang"></i>分享(0)</span>
+                                <span><i class="iconfont icon-xiazai"></i>下载全部</span>
+                            </div>
+                        </div>
+                        <div class="info-btn2">
+                            <span class="on">歌曲列表</span>
+                            <span>评论(0)</span>
+                            <span>收藏者</span>
+                        </div>
+                    </div>
+                    <!--歌曲列表-->
+                    <div class="content-song">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>音乐标题</td>
+                                    <td>歌手</td>
+                                    <td>专辑</td>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <!--<tr>-->
+                                    <!--<td>01</td>-->
+                                    <!--<td>夏至未至</td>-->
+                                    <!--<td>胡夏</td>-->
+                                    <!--<td>夏至未至 影视原声带</td>-->
+                                <!--</tr>-->
+                            </tbody>
+                        </table>
+                        <!--歌曲分页-->
+                        <div class="content-page fl">
+                            <span class="fl btn">&lt;</span>
+                            <div class="fl" id="page">
+                                <!--<span class="on">1</span>-->
+                                <!--<span>2</span>-->
+                                <!--<span>3</span>-->
+                                <!--<span>4</span>-->
+                                <!--<span>5</span>-->
+                            </div>
+                            <span class="fr btn">&gt;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-bar">
+                    <div class="block"></div>
+                </div>
+            </div>
+            <!--弹窗歌词-->
+            <div class="main-lyric">
+                <div class="lyric-img fl">
+                    <div class="img">
+                        <img class="albumPic" src="http://i.gtimg.cn/music/photo/mid_album_300/S/X/003W45rC3ob4SX.jpg"/>
+                    </div>
+                    <div class="btn">
+                        <span><i class="iconfont icon-icon1460188445268"></i>喜欢</span>
+                        <span><i class="iconfont icon-wodeshoucang"></i>收藏</span>
+                        <span><i class="iconfont icon-xiazai"></i>下载</span>
+                        <span><i class="iconfont icon-fenxiang"></i>分享</span>
+                    </div>
+                    <div class="block"></div>
+                </div>
+                <div class="lyric-content fr">
+                    <div class="song-name">The truth that you leave</div>
+                    <div class="singer">陶孟童</div>
+                    <div class="lyric-txt">
+                        <div id="lyric-txt"></div>
+                    </div>
+                </div>
+                <div class="lyric-close">X</div>
+            </div>
+        </div>
+        <!--播放控件-->
+        <div id="footer">
+            <div class="footer-play fl">
+                <i class="iconfont icon-shangyishou prev"></i>
+                <i class="iconfont icon-bofang2 play"></i>
+                <i class="iconfont icon-xiayishou next"></i>
+            </div>
+            <div class="footer-progress fl">
+                <div class="time-start fl">00:00</div>
+                <div class="progress-song fl">
+                    <div class="red"></div>
+                    <span class="point"></span>
+                </div>
+                <div class="time-end fl">04:11</div>
+            </div>
+            <div class="footer-volume fl">
+                <i class="iconfont icon-yinliang fl onoff"></i>
+                <div class="progress-volume fl">
+                    <div class="red"></div>
+                    <span class="point"></span>
+                </div>
+                <i class="iconfont icon-ttpodicon-copy fl mode"></i>
+            </div>
+        </div>
+        <!--播放媒体-->
+        <audio src="http://ws.stream.qqmusic.qq.com/202773258.m4a?fromtag=46" id="audio"></audio>
+        <!--歌词中转站-->
+        <div id="lyrics" style="display:none"></div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
